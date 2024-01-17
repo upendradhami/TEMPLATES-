@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std; 
+ template < class t1, class t2>
+  t2 add( t1 a , t2 b)
+  {
+   t2 c;
+   c = a + b;
+   return c;
+
+  }
+  template < class t3>
+   t3 add( t3 a , t3 b)
+  {
+   t3 c;
+   c = a + b;
+   return c;
+  }
+int main() 
+
+{
+   int a = 23, b=56;
+   float c =12.90, d=96.89;
+    add (a, b);
+   cout << " the sum of the a and b is : " << add(a,b) << endl;
+    add (a,c);
+    cout << " the sum of  a and c is : " << add(a,c) << endl;
+    add ( c,d );
+    cout << " the sum of c and d is :  "  << add (c,d);
+   
+
+    return 0;
+}
