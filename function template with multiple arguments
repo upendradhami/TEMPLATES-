@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std; 
+
+template < class t1, class t2>
+void calc( t1 a[], int size , t2 &sum , t2 &avg)
+{
+  for (int i=0; i< size ; i++ )
+{
+   sum = sum + a[i];
+   avg = sum/ size;   
+}
+
+}
+int main() 
+
+{
+   int a[]= { 3, 64,2,55,9};
+   float sum= 0.0;
+   float avg= 0.0;
+   calc( a, 5, sum , avg);
+   cout << " the sum and average is : " << sum << " \t " << avg << endl;
+   float b[]={23.34, 89.23, 45.00};
+   double sb=0.00, sa=0.00;
+   calc( b , 5, sb, sa);
+   cout << " the sum and average is : " << sb << " \t " << sa << endl;
+   return 0;
+}
