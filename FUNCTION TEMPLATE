@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std; 
+template< class t>
+t assign (t n)
+{
+  if ( n< 0)
+  {
+    cout << " the given number is negative value " << endl;
+     return (n);
+  }
+  else if ( n > 0)
+  {
+    cout << " it is a positive value " << endl;
+    return (n);
+  }
+  else 
+  { 
+    return (0);
+  }
+   
+}
+int main() 
+
+{
+   int a= -5;
+   float b= 9.34;
+   cout << assign(a) << endl;
+
+    cout << assign(b) << endl;
+
+   return 0;
+}
