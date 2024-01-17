@@ -1,0 +1,45 @@
+#include<iostream>
+using namespace std;
+
+
+const int size = 5;
+
+template <class t>
+class array
+{
+public:
+    t arr[size];
+    void getarray();
+    t findmax();
+};
+
+template <class t>
+void array<t>::getarray()
+{
+    cout << "Provide the array elements" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin >> arr[i];
+    }
+}
+
+template <class t>
+t array<t>::findmax()
+{
+    t max = arr[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > max)
+            max = arr[i];
+    }
+    return max;
+}
+
+int main()
+{
+    array<int> a;
+    a.getarray();
+    cout << "Largest number is: " << a.findmax() << endl;
+
+    return 0;
+}
